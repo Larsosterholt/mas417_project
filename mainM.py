@@ -16,7 +16,6 @@ if __name__ == "__main__":
     if isInputValid == True:
         print("Name: ", name)
         user_data.name = name
-
         pass
 
 

@@ -1,8 +1,8 @@
 from DataHandler import DataHandler
 
+
 # UserInputDataClass inheriting from DataHandler
 class UserInputDataClass(DataHandler):
-
     # Public Constructor
     def __init__(self):
         self.user_input: str = None  # Example attribute
@@ -13,11 +13,11 @@ class UserInputDataClass(DataHandler):
             self.user_input = input("Please enter your name: ")
             if self.validate_data(self.user_input):
                 break
-            return self.user_input
+        return self.user_input
 
     # Public Method (Overriding abstract method)
     def validate_data(self, user_input: str):
-        if not user_input:
+        if not self.user_input:
             print("Invalid input. The name must not be empty.")
             return False
         if len(user_input) > 20:
