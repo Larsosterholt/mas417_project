@@ -1,7 +1,7 @@
 import requests
 import json
 
-'''
+
 response = requests.get("https://ipgeolocation.abstractapi.com/v1/?api_key=6c96de49e97f467b8cc6a446e5c4bdf1")
 #print(response.status_code)
 #print(response.content) #byteData
@@ -25,13 +25,5 @@ print("postal_code: ", postal_code )
 print("longitude: ", longitude)
 print("latitude: ", latitude)
 
-'''
 
-import requests
-
-url = "https://ipgeolocation.abstractapi.com/v1"
-
-response = requests.request("GET", url)
-
-print(response.text)
 

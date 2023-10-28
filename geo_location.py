@@ -2,7 +2,7 @@ from DataHandler import DataHandler
 import requests
 import json
 
-class GeoLocation(DataHandler):
+class GeoLocationAPI_Class(DataHandler):
 
     def __init__(self, endpoint_url: str):
 
@@ -23,9 +23,6 @@ class GeoLocation(DataHandler):
         latitude = json_object["latitude"]
         return city
 
-    def validate_data(self):
-        """
-        Validate the fetched data (implementation needed).
-        """
-        pass
+    def validate_data(self,data):
+        return bool(data)
 
