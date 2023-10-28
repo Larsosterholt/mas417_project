@@ -1,11 +1,5 @@
-from msg_class import UserData
 from DataHandler import DataHandler
-'''
-class UserInput:
-    def get_name(self):
-        name = input("Please enter your name: ")
-        return name
-'''
+
 
     # UserInputDataClass inheriting from DataHandler
 class UserInputDataClass(DataHandler):
@@ -21,9 +15,9 @@ class UserInputDataClass(DataHandler):
         def get_data(self):
 
             while True:
-                self.user_input = input("Please enter some data: ")
+                self.user_input = input("Please enter your name: ")
                 if len(self.user_input) > 20:
-                    print("Invalid input. The input should not exceed 10 characters.")
+                    print("Invalid input. The input should not exceed 20 characters.")
                 #elif self.user_input.isnumeric():
                  #   print("Invalid input. Numbers are not allowed.")
                 #elif not all(char.isalpha() for char in self.user_input):
