@@ -2,19 +2,22 @@ from DataHandler import DataHandler
 import requests
 import json
 
-class GeoLocationAPI_Class(DataHandler):
 
+class GeoLocationAPI_Class(DataHandler): #KLASSENAVN KONVENSJON????
     def __init__(self, endpoint_url: str):
 
         self.endpoint_url = endpoint_url
 
     def get_data(self):
-        response = requests.get(self.endpoint_url)      # byte data to string
-        byte2str = response.content.decode('utf-8')     # Parse the JSON string to a Python dictionary
-        self.json_object = json.loads(byte2str)
-        #print(self.json_object)
-        city = self.json_object["city"]
-        #print(city)
+        try:
+            response = requests.get(self.endpoint_url)      # byte data to string
+            response.raise_for_status()  # This will raise an HTTPError if the HTTP request returned an unsuccessful status code
+            byte2str = response.content.decode('utf-8')     # Parse the JSON string to a Python dictionary
+            self.json_object = json.loads(byte2str)
+            city = self.json_object["city"]
+        except requests.RequestException as e:
+            print(f"An error occurred while fetching data: {e}")
+            return None
         return city
 
     def validate_data(self, get_data):
@@ -25,7 +28,6 @@ class GeoLocationAPI_Class(DataHandler):
             print("Invalid input. The city name must be a string.")
             return False
         if len(get_data) < 1 or len(get_data) > 50:
-            print("Invalid input. The city name must be between 2 and 100 characters.")
+            print("Invalid input. The city name must be between 50 and 100 characters.")
             return False
         return True
-
