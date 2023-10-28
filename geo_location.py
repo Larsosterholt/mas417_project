@@ -9,20 +9,23 @@ class GeoLocationAPI_Class(DataHandler):
         self.endpoint_url = endpoint_url
 
     def get_data(self):
-        response = requests.get(self.endpoint_url)
-        # Step 1: Decode byte data to string
-        byte2utf = response.content.decode('utf-8')
-        # Step 2: Parse the JSON string to a Python dictionary
-        json_object = json.loads(byte2utf)
-        # Step 3: Extract the value for the " " key
-        country = json_object["country"]
-        region = json_object["region"]
-        city = json_object["city"]
-        postal_code = json_object["postal_code"]
-        longitude = json_object["longitude"]
-        latitude = json_object["latitude"]
+        response = requests.get(self.endpoint_url)      # byte data to string
+        byte2str = response.content.decode('utf-8')     # Parse the JSON string to a Python dictionary
+        self.json_object = json.loads(byte2str)
+        #print(self.json_object)
+        city = self.json_object["city"]
+        #print(city)
         return city
 
-    def validate_data(self,data):
-        return bool(data)
+    def validate_data(self, get_data):
+        if not get_data:
+            print("Invalid input. The name must not be empty.")
+            return False
+        if not isinstance(get_data, str):
+            print("Invalid input. The city name must be a string.")
+            return False
+        if len(get_data) < 1 or len(get_data) > 50:
+            print("Invalid input. The city name must be between 2 and 100 characters.")
+            return False
+        return True
 

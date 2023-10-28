@@ -13,19 +13,20 @@ if __name__ == "__main__":
     user_input = UserInputDataClass()
     name = user_input.get_data()
     isInputValid = user_input.validate_data(name)  # Store the return value of validate_data in is_valid
-    print("User input valid: ", isInputValid)
+    if isInputValid == True:
+        print("Name: ", name)
+        user_data.name = name
 
-    user_data.set_name(name)
+        pass
+
 
     geo_location = GeoLocationAPI_Class("https://ipgeolocation.abstractapi.com/v1/?api_key=6c96de49e97f467b8cc6a446e5c4bdf1")
     location = geo_location.get_data()
     isLocationValid = geo_location.validate_data(location)
-    print("Location input valid: ", isLocationValid)
-
-    user_data.set_geolocation(location)
-
-
-
+    if isLocationValid == True:
+        print("Location: ", location)
+        user_data.geolocation = location
+        pass
 
 
     stl_generator = STLGenerator()
