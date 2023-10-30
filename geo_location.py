@@ -11,11 +11,6 @@ class GeoLocationAPI_Class(DataHandler): #KLASSENAVN KONVENSJON????
 
         self.endpoint_url = endpoint_url
 
-    def __init__(self, endpoint_url: str):
-        if not endpoint_url.startswith('https://'):
-            raise ValueError("The endpoint URL must start with 'https://'")
-        self.endpoint_url = endpoint_url
-
 
 
 
