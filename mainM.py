@@ -10,6 +10,7 @@ if __name__ == "__main__":
     user_data = UserData()
 
 
+
     user_input = UserInputDataClass()
     name = user_input.get_data()
     isInputValid = user_input.validate_data(name)  # Store the return value of validate_data in is_valid

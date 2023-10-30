@@ -3,6 +3,7 @@ import requests
 import json
 
 
+
 class GeoLocationAPI_Class(DataHandler): #KLASSENAVN KONVENSJON????
     def __init__(self, endpoint_url: str):
         if not endpoint_url.startswith('https://'):
