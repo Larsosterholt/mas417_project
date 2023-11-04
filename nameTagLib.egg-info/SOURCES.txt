@@ -1,0 +1,13 @@
+README.md
+setup.py
+nameTagLib/DataHandler.py
+nameTagLib/__init__.py
+nameTagLib/geo_location.py
+nameTagLib/model_generator.py
+nameTagLib/msg_class.py
+nameTagLib/user_input.py
+nameTagLib.egg-info/PKG-INFO
+nameTagLib.egg-info/SOURCES.txt
+nameTagLib.egg-info/dependency_links.txt
+nameTagLib.egg-info/requires.txt
+nameTagLib.egg-info/top_level.txt
