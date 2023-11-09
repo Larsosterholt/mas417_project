@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download File</title>
+</head>
+<body>
+    <p>Thank you, {{ user_name }}! Your file is ready for download.</p>
+    <a href="/download" download>Click here to download</a>
+</body>
+</html>
