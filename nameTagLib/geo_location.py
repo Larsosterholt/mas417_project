@@ -1,4 +1,4 @@
-from DataHandler import DataHandler
+from nameTagLib.DataHandler import DataHandler
 import requests
 import json
 
@@ -20,6 +20,7 @@ class GeoLocationAPI_Class(DataHandler): #KLASSENAVN KONVENSJON????
             response.raise_for_status()  # This will raise an HTTPError if the HTTP request returned an unsuccessful status code
             byte2str = response.content.decode('utf-8')     # Parse the JSON string to a Python dictionary
             self.json_object = json.loads(byte2str)
+            #print(self.json_object)
             city = self.json_object["city"]
         except requests.RequestException as e:
             print(f"An error occurred while fetching data: {e}")

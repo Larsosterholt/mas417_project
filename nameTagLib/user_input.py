@@ -1,4 +1,4 @@
-from DataHandler import DataHandler
+from nameTagLib.DataHandler import DataHandler
 
 
 class UserInputDataClass(DataHandler):

@@ -1,7 +1,7 @@
-from msg_class import UserData
-from model_generator import STLGenerator
-from user_input import UserInputDataClass
-from geo_location import GeoLocationAPI_Class
+from nameTagLib.msg_class import UserData
+from nameTagLib.model_generator import STLGenerator
+from nameTagLib.user_input import UserInputDataClass
+from nameTagLib.geo_location import GeoLocationAPI_Class
 
 
 
