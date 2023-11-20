@@ -9,6 +9,7 @@ setup(
         'requests',
         'scipy',
         'cadquery',
+        'flask',
     ],
 )
 # generere bibliotek:  i terminal: " python setup.py sdist ".
