@@ -1,5 +1,5 @@
 from nameTagLib.msg_class import UserData
-from nameTagLib.model_generator import STLGenerator
+from nameTagLib.model_generator import modelGenerator
 from nameTagLib.user_input import UserInputDataClass
 from nameTagLib.geo_location import GeoLocationAPI_Class
 
@@ -29,7 +29,5 @@ if __name__ == "__main__":
         pass
 
 
-
-
-    stl_generator = STLGenerator()
+    stl_generator = modelGenerator()
     stl_generator.generate_stl(user_data)
