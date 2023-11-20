@@ -30,4 +30,4 @@ if __name__ == "__main__":
 
 
     stl_generator = modelGenerator()
-    stl_generator.generate_stl(user_data)
+    stl_generator.generate_3mf(user_data)

@@ -1,7 +1,7 @@
 import cadquery as cq
 
 class modelGenerator:
-    def generate_stl(self, user_data):
+    def generate_3mf(self, user_data):
         print(f"Generating STL file for {user_data.name} based at {user_data.geolocation}")
 
         # Defining width of the name tag based on the number of characters in the name/city

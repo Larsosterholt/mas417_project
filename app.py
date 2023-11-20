@@ -36,7 +36,7 @@ def submit():
 
         if isLocationValid:
             user_data.geolocation = location
-            stl_file_path = stl_generator.generate_stl(
+            stl_file_path = stl_generator.generate_3mf(
                 user_data)  # This should return the path to the generated STL file
 
             # Pass the user's name and location to the download template
