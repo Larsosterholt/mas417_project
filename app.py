@@ -14,7 +14,7 @@ app = Flask(__name__)
 user_data = UserData()
 user_input = UserInputDataClass()
 geo_location = GeoLocationAPI_Class("https://ipgeolocation.abstractapi.com/v1/?api_key=6c96de49e97f467b8cc6a446e5c4bdf1")  # Replace with your actual API key
-stl_generator = modelGenerator()
+model_generator = modelGenerator()
 
 
 # Route for the form
@@ -36,7 +36,7 @@ def submit():
 
         if isLocationValid:
             user_data.geolocation = location
-            stl_file_path = stl_generator.generate_3mf(
+            stl_file_path = model_generator.generate_3mf(
                 user_data)  # This should return the path to the generated STL file
 
             # Pass the user's name and location to the download template
@@ -49,9 +49,9 @@ def submit():
 # Route to download the STL file
 @app.route('/download')
 def download():
-    stl_file_path = "./name_tag.3mf"#request.args.get('name_tag.3mf')
-    if stl_file_path and os.path.exists(stl_file_path):
-        return send_file(stl_file_path, as_attachment=True, mimetype='application/octet-stream')
+    model_file_path = "./name_tag.3mf"#request.args.get('name_tag.3mf')
+    if model_file_path and os.path.exists(model_file_path):
+        return send_file(model_file_path, as_attachment=True, mimetype='application/octet-stream')
     else:
         return "File not found", 404
 
