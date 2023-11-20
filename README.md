@@ -11,7 +11,7 @@ Generates a 3D-printable name tag with a name of choice and location based on yo
 1. **Create and Activate a New Conda Environment**:
    - Open your command line interface and run:
      ```bash
-     conda create --name myenv python=3.8  # Replace 3.8 with the required Python version
+     conda create --name myenv python=3.8
      conda activate myenv
      ```
 
@@ -27,8 +27,7 @@ Generates a 3D-printable name tag with a name of choice and location based on yo
      ```bash
      pip install dist/nameTagLib-0.1.0.tar.gz
      ```
-   - If there are additional dependencies, install them here (e.g., `pip install -r requirements.txt`).
-
+     
 4. **Run the Name Tag Generator**:
    - Use the name tag generator from CLI by running `main.py`:
      ```bash
