@@ -1,6 +1,5 @@
 # Project Setup Instructions
 
-This guide will walk you through the process of setting up the environment, cloning the project, and installing the required packages.
 
 1. **Create and Activate a New Conda Environment**:
    - Open your command line interface and run:
