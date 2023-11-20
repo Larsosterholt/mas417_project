@@ -2,7 +2,7 @@ import cadquery as cq
 
 class modelGenerator:
     def generate_3mf(self, user_data):
-        print(f"Generating STL file for {user_data.name} based at {user_data.geolocation}")
+        print(f"Generating .3mf file for {user_data.name} based at {user_data.geolocation}")
 
         # Defining width of the name tag based on the number of characters in the name/city
         width = max(len(user_data.name), len(user_data.geolocation))
@@ -20,4 +20,4 @@ class modelGenerator:
         filename = "./name_tag.3mf"
         cq.exporters.export(model, filename)
 
-        print(f"3mf file generated: name_tag.stl")
+        print(f"3mf file generated: name_tag.3mf")
