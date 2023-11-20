@@ -1,6 +1,7 @@
 <p align="center">
  <img src="https://github.com/Larsosterholt/mas417_project/blob/main/figures/example.png" alt="Example Tags"></a>
 </p>
+
 # Name Tag Generator
 
 Generates a 3D-printable name tag with a name of choice and location based on your IP address.
