@@ -29,5 +29,5 @@ if __name__ == "__main__":
         pass
 
 
-    stl_generator = modelGenerator()
-    stl_generator.generate_3mf(user_data)
+    model_generator = modelGenerator()
+    model_generator.generate_3mf(user_data)
