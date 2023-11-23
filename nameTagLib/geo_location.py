@@ -35,6 +35,6 @@ class GeoLocationAPI_Class(DataHandler): #KLASSENAVN KONVENSJON????
             print("Invalid input. The city name must be a string.")
             return False
         if len(get_data) < 1 or len(get_data) > 50:
-            print("Invalid input. The city name must be between 50 and 100 characters.")
+            print("Invalid input. The city name must be between 1 and 50 characters.")
             return False
         return True

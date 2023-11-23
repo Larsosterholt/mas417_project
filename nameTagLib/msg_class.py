@@ -19,5 +19,3 @@ class UserData:
     def geolocation(self, value):
         self._geolocation = value
 
-    def __repr__(self):
-        return f"UserData(name={self.name}, geolocation={self.geolocation})"
